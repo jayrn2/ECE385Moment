@@ -48,7 +48,7 @@ module vga_text_avl_interface (
 	output logic hs, vs							// VGA HS/VS
 );
 
-logic [31:0] LOCAL_REG [0:601];					// Registers
+logic [31:0] LOCAL_REG [601];					// Registers
 // put other local variables here
 logic [7:0] data;								// Output for font_rom
 
@@ -62,7 +62,8 @@ font_rom fm(.addr(row_idx), .data(data));		// row_idx is calculated below
 
 
 // Read and write from AVL interface to register block, note that READ waitstate = 1, so this should be in always_ff
-always_ff @(posedge CLK) begin
+always_ff @(posedge CLK) 
+begin
 	if (RESET)
 		begin
 			for (int i = 0; i < `NUM_REGS; i++)
@@ -106,17 +107,16 @@ assign char_num = char_address[1:0]; 				// Location of the character relative t
 
 // Determine the ascii code of the sprite
 logic [7:0] fm_code;
-always_comb
+always_ff @(posedge CLK)
 	begin
-		fm_code = 0; 
-		if(char_num == 2'b00)									// 0th character
-			fm_code = LOCAL_REG[register][7:0];
-		if(char_num == 2'b01)									// 1st character
-			fm_code = LOCAL_REG[register][15:8];				
-		if(char_num == 2'b10)									// 2nd character
-			fm_code = LOCAL_REG[register][23:16];				
-		if(char_num == 2'b11)									// 3rd character
-			fm_code = LOCAL_REG[register][31:24];		
+		if(char_num == 2'b00)										// 0th character
+			fm_code <= LOCAL_REG[register][7:0];
+		else if(char_num == 2'b01)									// 1st character
+			fm_code <= LOCAL_REG[register][15:8];				
+		else if(char_num == 2'b10)									// 2nd character
+			fm_code <= LOCAL_REG[register][23:16];				
+		else if(char_num == 2'b11)									// 3rd character
+			fm_code <= LOCAL_REG[register][31:24];		
 	end		
 
 
@@ -126,7 +126,7 @@ assign row_idx = fm_code[6:0]*16 + DrawY[3:0];
 logic [2:0]	 col_idx;
 assign col_idx = 7 - DrawX[2:0];
 
-logic color_bit; 
+logic color_bit;
 assign color_bit = data[col_idx];
 
 
@@ -141,15 +141,15 @@ begin
 		end
 	else if (fm_code[7] ^ color_bit == 1'b1) 			// draw foreground
 		begin
-			red 	<=	LOCAL_REG[601][24:21];
-			green <= LOCAL_REG[601][20:17];
-			blue 	<=	LOCAL_REG[601][16:13];
+			red 	<=	LOCAL_REG[600][24:21];
+			green <= LOCAL_REG[600][20:17];
+			blue 	<=	LOCAL_REG[600][16:13];
 		end
 	else if (fm_code[7] ^ color_bit == 1'b0) 			// draw background
 		begin
-			red 	<=	LOCAL_REG[601][12:9];
-			green <=	LOCAL_REG[601][8:5];
-			blue 	<=	LOCAL_REG[601][4:1];
+			red 	<=	LOCAL_REG[600][12:9];
+			green <=	LOCAL_REG[600][8:5];
+			blue 	<=	LOCAL_REG[600][4:1];
 		end
 end
 
