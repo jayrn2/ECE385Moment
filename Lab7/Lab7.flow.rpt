@@ -1,5 +1,5 @@
 Flow report for Lab7
-Thu Mar 30 16:09:50 2023
+Thu Mar 30 16:27:44 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 30 16:09:33 2023       ;
+; Flow Status                        ; Successful - Thu Mar 30 16:27:28 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab7                                        ;
 ; Top-level Entity Name              ; lab7                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 36,456 / 49,760 ( 73 % )                    ;
-;     Total combinational functions  ; 32,337 / 49,760 ( 65 % )                    ;
+; Total logic elements               ; 36,806 / 49,760 ( 74 % )                    ;
+;     Total combinational functions  ; 32,347 / 49,760 ( 65 % )                    ;
 ;     Dedicated logic registers      ; 21,355 / 49,760 ( 43 % )                    ;
 ; Total registers                    ; 21424                                       ;
 ; Total pins                         ; 141 / 360 ( 39 % )                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/30/2023 16:04:14 ;
+; Start date & time ; 03/30/2023 16:22:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab7                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-------------------+------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name       ; Section Id ;
 +-------------------------------------+------------------------------------------------------------+---------------+-------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 137118558507613.168021025338040                            ; --            ; --                ; --         ;
+; COMPILER_SIGNATURE_ID               ; 137118558507613.168021133119388                            ; --            ; --                ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --                ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                          ; --            ; --                ; --         ;
 ; MISC_FILE                           ; lab7_soc/synthesis/../lab7_soc.cmp                         ; --            ; --                ; --         ;
@@ -92,7 +92,7 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --                ; --         ;
 ; SLD_FILE                            ; lab7_soc/synthesis/lab7_soc.regmap                         ; --            ; --                ; --         ;
 ; SLD_FILE                            ; lab7_soc/synthesis/lab7_soc.debuginfo                      ; --            ; --                ; --         ;
-; SLD_INFO                            ; QSYS_NAME lab7_soc HAS_SOPCINFO 1 GENERATION_ID 1680210225 ; --            ; lab7_soc          ; --         ;
+; SLD_INFO                            ; QSYS_NAME lab7_soc HAS_SOPCINFO 1 GENERATION_ID 1680211229 ; --            ; lab7_soc          ; --         ;
 ; SOPCINFO_FILE                       ; lab7_soc/synthesis/../../lab7_soc.sopcinfo                 ; --            ; --                ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                         ; --            ; --                ; --         ;
 +-------------------------------------+------------------------------------------------------------+---------------+-------------------+------------+
@@ -103,11 +103,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:52     ; 1.0                     ; 5320 MB             ; 00:02:02                           ;
-; Fitter               ; 00:03:10     ; 1.9                     ; 7023 MB             ; 00:11:10                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4813 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:16     ; 6.0                     ; 5310 MB             ; 00:01:22                           ;
-; Total                ; 00:05:23     ; --                      ; --                  ; 00:14:38                           ;
+; Analysis & Synthesis ; 00:01:50     ; 1.0                     ; 5319 MB             ; 00:01:59                           ;
+; Fitter               ; 00:03:10     ; 1.9                     ; 6989 MB             ; 00:10:56                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4815 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:15     ; 6.1                     ; 5317 MB             ; 00:01:18                           ;
+; Total                ; 00:05:19     ; --                      ; --                  ; 00:14:17                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

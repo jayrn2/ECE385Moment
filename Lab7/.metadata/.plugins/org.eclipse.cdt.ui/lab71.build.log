@@ -1,9 +1,9 @@
-16:15:12 **** Incremental Build of configuration Nios II for project lab71 ****
+16:29:49 **** Incremental Build of configuration Nios II for project lab71 ****
 make all 
 Info: Building ../lab71_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab71_bsp/
 [BSP build complete]
 [lab71 build complete]
 
-16:15:13 Build Finished (took 583ms)
+16:29:49 Build Finished (took 612ms)
 
